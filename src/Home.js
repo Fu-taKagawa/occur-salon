@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from './component/header/header';
 import Footer from './component/footer/footer';
 
+import listImg from './img/list-img.png'
+
 function Home() {
   return (
     <>
@@ -34,7 +36,9 @@ function Home() {
             <div className='home__area__course__item'>
               <div className='home__area__course__item-design'>
                 <h2>デザイン案件獲得コンサル</h2>
-                <div><img src="" alt="" /></div>
+                <div className='home__area__course__item-img'>
+                  <img src={listImg} alt="イメージ" />
+                </div>
                 <div className='home__area__course__item__text'>
                   <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
@@ -42,7 +46,7 @@ function Home() {
                   <p>購入済み</p>
                 </div>
                 <div className='home__area__course__item__attend'>
-                  <Link to={'/'}>
+                  <Link to={'/designList'}>
                     <div className='home__area__course__item__attend__link'>
                       受講する
                     </div>
@@ -51,7 +55,9 @@ function Home() {
               </div>
               <div className='home__area__course__item-design'>
                 <h2>卒業コンテンツ</h2>
-                <div><img src="" alt="" /></div>
+                <div className='home__area__course__item-img'>
+                  <img src={listImg} alt="イメージ" />
+                </div>
                 <div className='home__area__course__item__text'>
                   <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
@@ -59,7 +65,7 @@ function Home() {
                   <p>購入済み</p>
                 </div>
                 <div className='home__area__course__item__attend'>
-                  <Link to={'/'}>
+                  <Link to={'/graduatedList'}>
                     <div className='home__area__course__item__attend__link'>
                       受講する
                     </div>
@@ -68,7 +74,9 @@ function Home() {
               </div>
               <div className='home__area__course__item-design'>
                 <h2>LP案件獲得コンサル</h2>
-                <div><img src="" alt="" /></div>
+                <div className='home__area__course__item-img'>
+                  <img src={listImg} alt="イメージ" />
+                </div>
                 <div className='home__area__course__item__text'>
                   <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
