@@ -1,9 +1,16 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Header from '../../../component/header/header';
 import Footer from '../../../component/footer/footer';
 import DesignNavi from '../../../component/navigation/DesignNavi';
 
-const designInvoice2 = () =>{
+const DesignInvoice2 = () =>{
+    useEffect(() => {
+        function OnLoad(){
+            const navi__designInvoice2 = document.querySelector('.navi__design-invoice2');
+            navi__designInvoice2.classList.add('bg__orange');
+        }
+        OnLoad();
+    },[])
     return (
         <>
             <Header/>
@@ -20,4 +27,4 @@ const designInvoice2 = () =>{
     )
 }
 
-export default designInvoice2
+export default DesignInvoice2

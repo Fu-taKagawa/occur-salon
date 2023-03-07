@@ -27,7 +27,7 @@ function Home() {
                 <p>1.本講座を進めていくにあたってのガイダンス</p>
               </div>
               <div className='home__area__content__progress__link'>
-                <Link>続きから学習する</Link>
+                <Link to={'/design/prepare1'}>続きから学習する</Link>
               </div>
             </div>
           </div>

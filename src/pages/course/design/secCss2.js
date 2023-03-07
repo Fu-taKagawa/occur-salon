@@ -1,9 +1,16 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Header from '../../../component/header/header';
 import Footer from '../../../component/footer/footer';
 import DesignNavi from '../../../component/navigation/DesignNavi';
 
-const designCss2 = () =>{
+const DesignCss2 = () =>{
+    useEffect(() => {
+        function OnLoad(){
+            const navi__designCss2 = document.querySelector('.navi__design-css2');
+            navi__designCss2.classList.add('bg__orange');
+        }
+        OnLoad();
+    },[])
     return (
         <>
             <Header/>
@@ -20,4 +27,4 @@ const designCss2 = () =>{
     )
 }
 
-export default designCss2
+export default DesignCss2

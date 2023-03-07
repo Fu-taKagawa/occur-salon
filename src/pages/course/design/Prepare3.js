@@ -1,9 +1,16 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Header from '../../../component/header/header';
 import Footer from '../../../component/footer/footer';
 import DesignNavi from '../../../component/navigation/DesignNavi';
 
-const designPre3 = () =>{
+const DesignPre3 = () =>{
+    useEffect(() => {
+        function OnLoad(){
+            const navi__designPre3 = document.querySelector('.navi__design-pre3');
+            navi__designPre3.classList.add('bg__orange');
+        }
+        OnLoad();
+    },[])
     return (
         <>
             <Header/>
@@ -20,4 +27,4 @@ const designPre3 = () =>{
     )
 }
 
-export default designPre3
+export default DesignPre3
