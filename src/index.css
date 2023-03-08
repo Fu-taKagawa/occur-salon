@@ -442,11 +442,39 @@ ul{
   font-weight: bold;
   font-family: Noto-sansJP, YuGothic, "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
+.userInfo__editEndBtn input{
+  height: 30px;
+}
+.userInfo__editEndBtn button{
+  padding: 15px 35px;
+  margin: 0 0 0 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background: #dadada;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Noto-sansJP, YuGothic, "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  cursor: pointer;
+
+}
+.display-block{
+  display: block;
+}
+.display-none{
+  display: none;
+}
 @media (max-width:959px) and (min-width:590px){
   .userInfo__content{
     width: 90%;
   }
   .userInfo__content__box a{
+    font-size: 12px;
+  }
+  .userInfo__editEndBtn button{
+    padding: 10px 32px;
     font-size: 12px;
   }
 }
@@ -461,6 +489,18 @@ ul{
   .userInfo__content__box__text{
     flex-direction: column;
     margin: 0;
+  }
+  .userInfo__editEndBtn{
+    width: 150px;
+    text-align: right;
+  }
+  .userInfo__editEndBtn input{
+    width: 80%;
+  }
+  .userInfo__editEndBtn button{
+    padding: 10px 30px;
+    margin: 10px 0; 
+    font-size: 12px;
   }
 }
 .footerPage__content h1{
