@@ -16,7 +16,7 @@ const Header=()=>{
                     <div className="gnavi__wrap">
                         <ul className="gnavi__lists">
                             <li className="gnavi__list">
-                                <Link to={'/'} className="gnavi__link">マイページ</Link>
+                                <Link to={'/userInfo'} className="gnavi__link">マイページ</Link>
                                 <ul className="dropdown__lists">
                                     <li className="dropdown__list">
                                         <Link to={'/userInfo'}>会員情報</Link>
