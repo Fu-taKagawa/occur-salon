@@ -442,10 +442,20 @@ ul{
   font-weight: bold;
   font-family: Noto-sansJP, YuGothic, "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
-.userInfo__editEndBtn input{
+.userInfo__editEndBtn1 input,
+.userInfo__editEndBtn2 input,
+.userInfo__editEndBtn3 input{
   height: 30px;
 }
-.userInfo__editEndBtn button{
+.userInfo__editEndBtn3{
+  text-align: right;
+}
+.userInfo__editEndBtn3 input{
+  margin: 0px 0px 10px 10px;
+}
+.userInfo__editEndBtn1 button,
+.userInfo__editEndBtn2 button,
+.userInfo__editEndBtn3 button{
   padding: 15px 35px;
   margin: 0 0 0 20px;
   text-align: center;
@@ -473,7 +483,9 @@ ul{
   .userInfo__content__box a{
     font-size: 12px;
   }
-  .userInfo__editEndBtn button{
+  .userInfo__editEndBtn1 button,
+  .userInfo__editEndBtn2 button,
+  .userInfo__editEndBtn3 button{
     padding: 10px 32px;
     font-size: 12px;
   }
@@ -490,14 +502,20 @@ ul{
     flex-direction: column;
     margin: 0;
   }
-  .userInfo__editEndBtn{
+  .userInfo__editEndBtn1, 
+  .userInfo__editEndBtn2,
+  .userInfo__editEndBtn3{
     width: 150px;
     text-align: right;
   }
-  .userInfo__editEndBtn input{
+  .userInfo__editEndBtn1 input,
+  .userInfo__editEndBtn2 input,
+  .userInfo__editEndBtn3 input{
     width: 80%;
   }
-  .userInfo__editEndBtn button{
+  .userInfo__editEndBtn1 button,
+  .userInfo__editEndBtn2 button,
+  .userInfo__editEndBtn3 button{
     padding: 10px 30px;
     margin: 10px 0; 
     font-size: 12px;
