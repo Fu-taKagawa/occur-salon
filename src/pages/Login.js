@@ -7,16 +7,37 @@ const Login = ({history}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const handleSubmit = e => {
-    e.preventDefault();
-        firebase
-        .auth().signInWithEmailAndPassword(email, password)
-        .then(() => {
-            history.push('/');
+        e.preventDefault();
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            const uid = userCredential.user.uid;
+            const userRef = firebase.firestore().collection('userAuth').doc(uid);
+            console.log(uid)
+            userRef.get()
+            .then((doc) => {
+                if (doc.exists) {
+                const data = doc.data();
+                const userRole = data.role;
+                if (userRole === 'admin') {
+                    // 管理者
+                    console.log('ok')
+                } else {
+                    // 一般ユーザー
+                    console.log('no')
+                }
+                } else {
+                    console.log('ユーザーデータが存在しません');
+                }
+                history.push('/');
+            }).catch((error) => {
+                console.log('ユーザーデータの取得に失敗しました: ', error);
+            });
         })
-        .catch(err => {
-            console.log(err);
-            alert('メールアドレス・パスワードに間違いがあります。')
+        .catch((error) => {
+            console.log(error);
+            alert('メールアドレス・パスワードに間違いがあります。');
         });
+        
     };
     if (user) {
         return <Redirect to="/" />

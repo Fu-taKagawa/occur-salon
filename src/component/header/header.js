@@ -18,9 +18,7 @@ const Header=()=>{
                             <li className="gnavi__list">
                                 <Link to={'/userInfo'} className="gnavi__link">マイページ</Link>
                                 <ul className="dropdown__lists">
-                                    <li className="dropdown__list">
-                                        <Link to={'/userInfo'}>会員情報</Link>
-                                    </li>
+                                    <li className="dropdown__list"><Link to={'/userInfo'}>会員情報</Link></li>
                                     <li className="dropdown__list"><Link onClick={() => firebase.auth().signOut()} to={'/login'}>ログアウト</Link></li>
                                 </ul>
                             </li>

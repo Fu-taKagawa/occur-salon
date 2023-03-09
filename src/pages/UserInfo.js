@@ -60,7 +60,6 @@ const UserInfo = () =>{
         if(user){
             user.updateEmail(newEmail)
             .then(() => {
-                console.log('ok')
                 window.location.reload(true)
             }).catch((error) => {
                 console.log(error);
