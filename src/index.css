@@ -226,13 +226,17 @@ ul{
   background: #ff5c01;
 }
 
-.home__area__course__item-design{
+.home__area__course__item-design,
+.home__area__course__item-graduated,
+.home__area__course__item-lp{
   width: 28%;
   padding: 15px 20px 20px;
   background: #fff;
   box-shadow : 0px 0px 15px #cccccc ;
 }
-.home__area__course__item-design h2{
+.home__area__course__item-design h2,
+.home__area__course__item-graduated h2,
+.home__area__course__item-lp h2{
   text-align: center;
   font-size: 20px;
   font-weight: bold;

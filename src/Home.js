@@ -53,7 +53,7 @@ function Home() {
                   </Link>
                 </div>
               </div>
-              <div className='home__area__course__item-design'>
+              <div className='home__area__course__item-graduated'>
                 <h2>卒業コンテンツ</h2>
                 <div className='home__area__course__item-img'>
                   <img src={listImg} alt="イメージ" />
@@ -72,7 +72,7 @@ function Home() {
                   </Link>
                 </div>
               </div>
-              <div className='home__area__course__item-design'>
+              <div className='home__area__course__item-lp'>
                 <h2>LP案件獲得コンサル</h2>
                 <div className='home__area__course__item-img'>
                   <img src={listImg} alt="イメージ" />
