@@ -7,42 +7,38 @@ const Login = ({history}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const handleSubmit = e => {
-        e.preventDefault();
-        firebase.auth().signInWithEmailAndPassword(email, password)
+    e.preventDefault();
+    firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            const uid = userCredential.user.uid;
-            const userRef = firebase.firestore().collection('userAuth').doc(uid);
-            console.log(uid)
-            userRef.get()
+        const uid = userCredential.user.uid;
+        const userRef = firebase.firestore().collection('userAuth').doc(uid);
+        userRef.get()
             .then((doc) => {
-                if (doc.exists) {
+            if (doc.exists) {
                 const data = doc.data();
                 const userRole = data.role;
                 if (userRole === 'admin') {
-                    // 管理者
-                    console.log('ok')
-                } else {
-                    // 一般ユーザー
-                    console.log('no')
+                // 管理者
+                } else if (userRole === 'user'){
+                // 一般ユーザー
                 }
-                } else {
-                    console.log('ユーザーデータが存在しません');
-                }
-                history.push('/');
+                
+            } else {
+                console.log('ユーザーデータが存在しません');
+            }
+            history.push('/');
             }).catch((error) => {
-                console.log('ユーザーデータの取得に失敗しました: ', error);
+            console.log('ユーザーデータの取得に失敗しました: ', error);
             });
         })
         .catch((error) => {
-            console.log(error);
-            alert('メールアドレス・パスワードに間違いがあります。');
+        console.log(error);
+        alert('メールアドレス・パスワードに間違いがあります。');
         });
-        
     };
     if (user) {
         return <Redirect to="/" />
     }
-
     return(
         <>
             <div className="login">

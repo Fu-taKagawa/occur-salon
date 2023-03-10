@@ -33,7 +33,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/prepare1'}>続きから学習する</Link>
+                                <Link to={'/design/prepare1'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -41,7 +41,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/prepare2'}>続きから学習する</Link>
+                                <Link to={'/design/prepare2'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -49,7 +49,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/prepare3'}>続きから学習する</Link>
+                                <Link to={'/design/prepare3'}>受講する</Link>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/sechtml1'}>続きから学習する</Link>
+                                <Link to={'/design/sechtml1'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -68,7 +68,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/sechtml2'}>続きから学習する</Link>
+                                <Link to={'/design/sechtml2'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -76,7 +76,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/sechtml3'}>続きから学習する</Link>
+                                <Link to={'/design/sechtml3'}>受講する</Link>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/seccss1'}>続きから学習する</Link>
+                                <Link to={'/design/seccss1'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -95,7 +95,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/seccss2'}>続きから学習する</Link>
+                                <Link to={'/design/seccss2'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -103,7 +103,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/seccss3'}>続きから学習する</Link>
+                                <Link to={'/design/seccss3'}>受講する</Link>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/invoice1'}>続きから学習する</Link>
+                                <Link to={'/design/invoice1'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -122,7 +122,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/invoice2'}>続きから学習する</Link>
+                                <Link to={'/design/invoice2'}>受講する</Link>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -130,7 +130,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/invoice3'}>続きから学習する</Link>
+                                <Link to={'/design/invoice3'}>受講する</Link>
                             </div>
                         </div>
                     </div>
