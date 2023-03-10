@@ -280,7 +280,9 @@ ul{
   .home__area__course__item{
     flex-direction: column;
   }
-  .home__area__course__item-design{
+  .home__area__course__item-design,
+  .home__area__course__item-graduated,
+  .home__area__course__item-lp{
     width: 90%;
     padding: 15px;
     margin-bottom: 30px;
