@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './component/header/header';
 import Footer from './component/footer/footer';
-
 import listImg from './img/list-img.png'
 
 function Home() {

@@ -1,11 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import firebase from "../../config/firebase";
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-import 'firebase/firestore'
-
 const Header=()=>{
+    const AdminButton = () => {
+        const currentUser = firebase.auth().currentUser;
+        if (currentUser && currentUser.email === 'root@gmail.com') {
+            return (
+            <div className='adminBtn'>
+                <Link to={'/admin'}>生徒の学習状況(管理者専用)</Link>
+            </div>
+            )
+        } else {
+            return null;
+        }
+    };
     return(
         <>
             <header>
@@ -13,6 +21,7 @@ const Header=()=>{
                     <div className="logo">
                         <Link to={'/'}><h1>卒業生サロン</h1></Link>
                     </div>
+                    <AdminButton/>
                     <div className="gnavi__wrap">
                         <ul className="gnavi__lists">
                             <li className="gnavi__list">

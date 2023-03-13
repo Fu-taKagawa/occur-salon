@@ -4,6 +4,7 @@ import { AuthProvider} from "./AuthService";
 import LoggedInRoute from "./LoggedInRoute";
 
 import Home from "./Home";
+import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import terms from "./pages/Terms";
 import privacy from "./pages/Privacy";
@@ -30,6 +31,7 @@ const App = () => {
       <Router>
         <Switch>
           <LoggedInRoute exact path='/' component={Home} />
+          <Route exact path='/admin' component={Admin}/>
           <Route exact path='/login' component={Login} />
           <Route exact path='/terms' component={terms}/>
           <Route exact path='/privacy' component={privacy}/>
