@@ -30,7 +30,7 @@ const DesignListBtn = (props) =>{
     };
     return(
         <>
-            {isItemViewed ? (<Link to={`/design/${itemId}`} className='bg__black'>閲覧済み</Link>):(<Link to={`/design/${itemId}`} onClick={() => handleView(itemId)}>受講する</Link>)}
+            {isItemViewed ? (<Link to={`/design/${itemId}`} className='bg__black'>復習する</Link>):(<Link to={`/design/${itemId}`} onClick={() => handleView(itemId)}>受講する</Link>)}
         </>
     )
 }
