@@ -1,12 +1,13 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import Header from "../../../component/header/header";
 import Footer from "../../../component/footer/footer";
 import { Link } from "react-router-dom";
 
+import DesignListBtn from "../../../component/btn/DesignListBtn";
 import homeIcon from '../../../img/home-icon.svg'
 import angleRight from '../../../img/angle-right.svg'
 
-const designList =()=>{
+const DesignList =()=>{
     return(
         <>
             <Header/>
@@ -33,7 +34,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/prepare1'}>受講する</Link>
+                                <DesignListBtn itemId='prepare1'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -41,7 +42,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/prepare2'}>受講する</Link>
+                                <DesignListBtn itemId='prepare2'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -49,7 +50,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/prepare3'}>受講する</Link>
+                                <DesignListBtn itemId='prepare3'/>
                             </div>
                         </div>
                     </div>
@@ -60,7 +61,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/sechtml1'}>受講する</Link>
+                                <DesignListBtn itemId='sechtml1'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -68,7 +69,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/sechtml2'}>受講する</Link>
+                                <DesignListBtn itemId='sechtml2'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -76,7 +77,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/sechtml3'}>受講する</Link>
+                                <DesignListBtn itemId='sechtml3'/>
                             </div>
                         </div>
                     </div>
@@ -87,7 +88,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/seccss1'}>受講する</Link>
+                                <DesignListBtn itemId='seccss1'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -95,7 +96,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/seccss2'}>受講する</Link>
+                                <DesignListBtn itemId='seccss2'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -103,7 +104,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/seccss3'}>受講する</Link>
+                                <DesignListBtn itemId='seccss3'/>
                             </div>
                         </div>
                     </div>
@@ -114,7 +115,7 @@ const designList =()=>{
                                 <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/invoice1'}>受講する</Link>
+                                <DesignListBtn itemId='invoice1'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -122,7 +123,7 @@ const designList =()=>{
                                 <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/invoice2'}>受講する</Link>
+                                <DesignListBtn itemId='invoice2'/>
                             </div>
                         </div>
                         <div className="list__area__content__item">
@@ -130,7 +131,7 @@ const designList =()=>{
                                 <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
                             </div>
                             <div className='list__area__content__item__link'>
-                                <Link to={'/design/invoice3'}>受講する</Link>
+                                <DesignListBtn itemId='invoice3'/>
                             </div>
                         </div>
                     </div>
@@ -141,4 +142,4 @@ const designList =()=>{
     )
 }
 
-export default designList
+export default DesignList

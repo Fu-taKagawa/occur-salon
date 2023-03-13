@@ -179,6 +179,9 @@ ul{
   font-weight: bold;
   font-family: Noto-sansJP, YuGothic, "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
+.list__area__content__item__link .bg__black{
+  background: #3f3f3f;
+}
 .home__area__course h1{
   font-size: 30px;
   font-weight: bold;

@@ -9,7 +9,7 @@ import terms from "./pages/Terms";
 import privacy from "./pages/Privacy";
 import userInfo from "./pages/UserInfo";
 import law from "./pages/Law";
-import designList from "./pages/course/design/DesignList";
+import DesignList from "./pages/course/design/DesignList";
 import DesignPre1 from "./pages/course/design/Prepare1";
 import DesignPre2 from "./pages/course/design/Prepare2";
 import DesignPre3 from "./pages/course/design/Prepare3";
@@ -35,7 +35,7 @@ const App = () => {
           <Route exact path='/privacy' component={privacy}/>
           <Route exact path='/userInfo' component={userInfo}/>
           <Route exact path='/law' component={law}/>
-          <Route exact path='/designList' component={designList}/>
+          <Route exact path='/designList' component={DesignList}/>
           <Route exact path='/design/prepare1' component={DesignPre1}/>
           <Route exact path='/design/prepare2' component={DesignPre2}/>
           <Route exact path='/design/prepare3' component={DesignPre3}/>
