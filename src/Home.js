@@ -13,11 +13,11 @@ function Home() {
           <div className='home__area__content'>
             <h1>学習中のコンテンツ</h1>
             <div className='home__area__content__btn'>
-              <div className='home__area__content__btn-graduated btn-active'>
-                <Link to='/'>卒業コンテンツ</Link>
-              </div>
-              <div className='home__area__content__btn-design btn-inactive'>
+              <div className='home__area__content__btn-design btn-active'>
                 <Link to='/'>デザイン案件獲得コンサル</Link>
+              </div>
+              <div className='home__area__content__btn-graduated btn-inactive'>
+                <Link to='/'>卒業コンテンツ</Link>
               </div>
             </div>
             <div className='home__area__content__progress'>
