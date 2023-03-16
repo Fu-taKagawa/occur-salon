@@ -7,9 +7,7 @@ const LoggedInRoute = ({ component: Component, ...rest }) => {
     return (
         <Route
             {...rest}
-            component={props =>
-                user ? <Component {...props} /> : <Redirect to={'/login'} />
-            }
+            component={props => user ? <Component {...props} /> : <Redirect to={'/login'} />}
         />
     );
 };
