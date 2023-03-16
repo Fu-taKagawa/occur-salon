@@ -110,13 +110,6 @@ ul{
   font-weight: bold;
   font-family: Noto-sansJP, YuGothic, "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
-.adminBtn a{
-  color: #fff;
-  background: #013cff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-}
 .home__area__content__btn{
   display: flex;
 }

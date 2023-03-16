@@ -20,6 +20,13 @@
   color: #ff5c01;
   text-decoration: none;
 }
+.adminBtn a{
+  color: #fff;
+  background: #013cff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
 .gnavi__wrap{
   margin: 0 50px;
   background-color: #ff5c01;
@@ -91,14 +98,27 @@
   .dropdown__lists{
     right: 20px;
   }
+  .logo a{
+    font-size: 8px;
+  }
+  .adminBtn a{
+    font-size: 10px;
+    padding: 5px;
+  }
 }
 
 @media (max-width:399px){
+  .gnavi__wrap{
+    margin: 0 10px;
+  }
   .gnavi__lists{
-    width: 120px;
+    width: 100px;
   }
   .dropdown__lists{
     width: 120px;
+  }
+  .gnavi__link{
+    font-size: 13px;
   }
 }
 /* 

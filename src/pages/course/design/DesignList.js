@@ -1,9 +1,8 @@
-import React, {useState,useEffect} from "react";
+import React from "react";
 import Header from "../../../component/header/header";
 import Footer from "../../../component/footer/footer";
 import { Link } from "react-router-dom";
-
-import DesignListBtn from "../../../component/btn/DesignListBtn";
+import DesignContent from "../../../component/listContent/DesignContent";
 import homeIcon from '../../../img/home-icon.svg'
 import angleRight from '../../../img/angle-right.svg'
 
@@ -29,111 +28,27 @@ const DesignList =()=>{
                 <div className="list__area">
                     <div className="list__area__content">
                         <h1>事前準備編</h1>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='prepare1'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='prepare2'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='prepare3'/>
-                            </div>
-                        </div>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='prepare1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='prepare2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='prepare3'/>
                     </div>
                     <div className="list__area__content">
                         <h1>HTML編</h1>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='sechtml1'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='sechtml2'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='sechtml3'/>
-                            </div>
-                        </div>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='sechtml1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='sechtml2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='sechtml3'/>
                     </div>
                     <div className="list__area__content">
                         <h1>CSS編</h1>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='seccss1'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='seccss2'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='seccss3'/>
-                            </div>
-                        </div>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='seccss1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='seccss2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='seccss3'/>
                     </div>
                     <div className="list__area__content">
                         <h1>請求書編</h1>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>1.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='invoice1'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>2.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='invoice2'/>
-                            </div>
-                        </div>
-                        <div className="list__area__content__item">
-                            <div className='list__area__content__item__detail'>
-                                <p>3.本講座を進めていくにあたってのガイダンス (15:08)</p>
-                            </div>
-                            <div className='list__area__content__item__link'>
-                                <DesignListBtn itemId='invoice3'/>
-                            </div>
-                        </div>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='invoice1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='invoice2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='invoice3'/>
                     </div>
                 </div>
             </section>
@@ -141,5 +56,4 @@ const DesignList =()=>{
         </>
     )
 }
-
 export default DesignList

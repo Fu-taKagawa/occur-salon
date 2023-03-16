@@ -7,7 +7,7 @@ const Header=()=>{
         if (currentUser && currentUser.email === 'root@gmail.com') {
             return (
             <div className='adminBtn'>
-                <Link to={'/admin'}>生徒の学習状況(管理者専用)</Link>
+                <Link to={'/admin'}>管理者専用</Link>
             </div>
             )
         } else {
