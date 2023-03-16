@@ -29,6 +29,9 @@ ul{
   -webkit-transform : translateY(-50%);
   transform : translateY(-50%);
 }
+.login__area input{
+  -webkit-text-size-adjust: none;
+}
 .login__area h1{
   margin-bottom: 20px;
   font-size: 25px;
@@ -447,8 +450,8 @@ ul{
   font-weight: bold;
   font-family: Noto-sansJP, YuGothic, "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
-.userInfo__content__box form{
-  -webkit-appearance: none;
+.userInfo__content__box input{
+  -webkit-text-size-adjust: none;
 }
 
 .userInfo__content__box__text{
