@@ -115,7 +115,8 @@
     width: 100px;
   }
   .dropdown__lists{
-    width: 120px;
+    width: 100px;
+    right: 10px;
   }
   .gnavi__link{
     font-size: 13px;
