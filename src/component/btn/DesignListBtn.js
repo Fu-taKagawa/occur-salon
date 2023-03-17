@@ -16,16 +16,16 @@ const DesignListBtn = (props) =>{
             }
             });
         }
-        }, [itemId]);
+    }, [itemId]);
     const handleView = (itemId) => {
         const user = firebase.auth().currentUser;
         const itemRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
         itemRef.update({ viewed: true })
             .then(() => {
-            setIsItemViewed(true);
+                setIsItemViewed(true);
             })
             .catch((error) => {
-            console.error(error);
+                console.error(error);
             });
     };
     return(
