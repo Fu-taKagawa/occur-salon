@@ -8,7 +8,6 @@ function Home() {
   return (
     <>
       <Header/>
-      <div><p>aaaa</p></div>
       <section className='home'>
         <div className='home__area'>
           <div className='home__area__content'>
