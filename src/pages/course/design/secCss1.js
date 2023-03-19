@@ -1,15 +1,28 @@
 import React,{useEffect} from 'react';
+import firebase from '../../../config/firebase';
 import Header from '../../../component/header/header';
 import Footer from '../../../component/footer/footer';
 import DesignNavi from '../../../component/navigation/DesignNavi';
 
 const DesignCss1 = () =>{
+    const user = firebase.auth().currentUser;
+    const itemId = 'seccss1';
+    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
     useEffect(() => {
         function OnLoad(){
-            const navi__designCss1 = document.querySelector('.navi__design-css1');
-            navi__designCss1.classList.add('bg__orange');
+            const navi__designPre1 = document.querySelector('.navi__design-css1');
+            navi__designPre1.classList.add('bg__orange');
         }
         OnLoad();
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                if (!doc.data().timestamp) {
+                docRef.update({ timestamp: firebase.firestore.FieldValue.serverTimestamp() });
+                } else {
+                docRef.update({ timestamp: firebase.firestore.FieldValue.serverTimestamp() });
+                }
+            }
+        });
     },[])
     return (
         <>

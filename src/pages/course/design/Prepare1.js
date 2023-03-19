@@ -1,17 +1,32 @@
 import React,{useEffect} from 'react';
+import firebase from '../../../config/firebase';
 import Header from '../../../component/header/header';
 import Footer from '../../../component/footer/footer';
 import DesignNavi from '../../../component/navigation/DesignNavi';
 
 const DesignPre1 = () =>{
+    const user = firebase.auth().currentUser;
+    const itemId = 'prepare1';
+    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
     useEffect(() => {
         function OnLoad(){
             const navi__designPre1 = document.querySelector('.navi__design-pre1');
             navi__designPre1.classList.add('bg__orange');
         }
         OnLoad();
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                // ドキュメントが存在する場合の処理
+                if (!doc.data().timestamp) {
+                // timestampフィールドが存在しない場合は、追加する
+                docRef.update({ timestamp: firebase.firestore.FieldValue.serverTimestamp() });
+                } else {
+                // timestampフィールドが存在する場合は、更新する
+                docRef.update({ timestamp: firebase.firestore.FieldValue.serverTimestamp() });
+                }
+            }
+        });
     },[])
-    
     return (
         <>
             <Header/>

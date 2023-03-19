@@ -1,10 +1,31 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import firebase from './config/firebase';
 import Header from './component/header/header';
 import Footer from './component/footer/footer';
 import listImg from './img/list-img.png'
 
 function Home() {
+  const user = firebase.auth().currentUser;
+  const [latestItem, setLatestItem] = useState(null);
+  useEffect(()=>{
+    firebase.firestore().collection(`userAuth/${user.uid}/items`)
+    .orderBy("timestamp", "desc") // timestampフィールドを降順でソートする
+    .limit(1) // 最新の1つだけを取得する
+    .get()
+    .then((querySnapshot) => {
+      if (!querySnapshot.empty) {
+        const latestItem = querySnapshot.docs[0];
+        console.log(`Latest item ID: ${latestItem.id}`);
+        setLatestItem(latestItem);
+      } else {
+        console.log("No items found.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error getting latest item: ", error);
+    });
+  },[])
   return (
     <>
       <Header/>
@@ -22,11 +43,11 @@ function Home() {
             </div>
             <div className='home__area__content__progress'>
               <div className='home__area__content__progress__detail'>
-                <p>事前準備編</p>
-                <p>1.本講座を進めていくにあたってのガイダンス</p>
+                {latestItem && <p>{latestItem.data().title}</p>}
+                {latestItem && <p>{latestItem.data().text}</p>}
               </div>
               <div className='home__area__content__progress__link'>
-                <Link to={'/design/prepare1'}>続きから学習する</Link>
+                {latestItem && (<Link to={`/design/${latestItem.id}`}>続きから学習する</Link>)}
               </div>
             </div>
           </div>
