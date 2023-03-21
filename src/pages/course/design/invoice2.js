@@ -22,6 +22,14 @@ const DesignInvoice2 = () =>{
                 docRef.update({ timestamp: firebase.firestore.FieldValue.serverTimestamp() });
                 }
             }
+            if (doc.exists) {
+                if (!doc.data().text) {
+                    docRef.update({ text: '2.本講座を進めていくにあたってのガイダンス' });
+                }
+                if (!doc.data().title) {
+                    docRef.update({ title: '請求書編' });
+                }
+            }
         });
     },[])
     return (

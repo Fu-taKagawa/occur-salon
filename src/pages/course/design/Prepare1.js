@@ -25,6 +25,17 @@ const DesignPre1 = () =>{
                 docRef.update({ timestamp: firebase.firestore.FieldValue.serverTimestamp() });
                 }
             }
+            if (doc.exists) {
+                // ドキュメントが存在する場合の処理
+                if (!doc.data().text) {
+                // textフィールドが存在しない場合は、追加する
+                    docRef.update({ text: '1.本講座を進めていくにあたってのガイダンス' });
+                }
+                if (!doc.data().title) {
+                // textフィールドが存在しない場合は、追加する
+                    docRef.update({ title: '事前準備編' });
+                }
+            }
         });
     },[])
     return (

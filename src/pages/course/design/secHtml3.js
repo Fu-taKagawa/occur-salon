@@ -22,6 +22,14 @@ const DesignHtml3 = () =>{
                 docRef.update({ timestamp: firebase.firestore.FieldValue.serverTimestamp() });
                 }
             }
+            if (doc.exists) {
+                if (!doc.data().text) {
+                    docRef.update({ text: '3.本講座を進めていくにあたってのガイダンス' });
+                }
+                if (!doc.data().title) {
+                    docRef.update({ title: 'HTML編' });
+                }
+            }
         });
     },[])
     return (
