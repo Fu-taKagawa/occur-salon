@@ -4,6 +4,7 @@ import firebase from './config/firebase';
 import Header from './component/header/header';
 import Footer from './component/footer/footer';
 import listImg from './img/list-img.png'
+import course_design from './img/course-design.png'
 
 function Home() {
   const user = firebase.auth().currentUser;
@@ -57,7 +58,7 @@ function Home() {
               <div className='home__area__course__item-design'>
                 <h2>デザイン案件獲得コンサル</h2>
                 <div className='home__area__course__item-img'>
-                  <img src={listImg} alt="イメージ" />
+                  <img src={course_design} alt="イメージ" />
                 </div>
                 <div className='home__area__course__item__text'>
                   <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>

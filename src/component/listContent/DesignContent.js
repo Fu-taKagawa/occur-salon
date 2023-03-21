@@ -1,9 +1,21 @@
-import React from "react";
+import React,{useEffect} from "react";
+import firebase from "../../config/firebase";
 import DesignListBtn from "../btn/DesignListBtn";
 
 const DesignContent = (props) =>{
+    const user = firebase.auth().currentUser;
     const title = props.title;
     const itemId = props.itemId;
+    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
+    useEffect(()=>{
+        docRef.get().then((doc) => {
+            if (doc.exists) {
+                if (!doc.data().viewed) {
+                    docRef.update({ viewed: false });
+                }
+            }
+        });
+    },[])
     return(
         <>
             <div className="list__area__content__item">
