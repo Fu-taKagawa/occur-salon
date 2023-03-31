@@ -9,6 +9,11 @@ import course_design from './img/course-design.png'
 function Home() {
   const user = firebase.auth().currentUser;
   const [latestItem, setLatestItem] = useState(null);
+  const [activeButton, setActiveButton] = useState('design');
+  const handleButtonClick = (button) => {
+    setActiveButton(button);
+    console.log(button)
+  };
   useEffect(()=>{
     firebase.firestore().collection(`userAuth/${user.uid}/items`)
     .orderBy("timestamp", "desc") // timestampフィールドを降順でソートする
@@ -17,7 +22,6 @@ function Home() {
     .then((querySnapshot) => {
       if (!querySnapshot.empty) {
         const latestItem = querySnapshot.docs[0];
-        console.log(`Latest item ID: ${latestItem.id}`);
         setLatestItem(latestItem);
       } else {
         console.log("No items found.");
@@ -35,22 +39,43 @@ function Home() {
           <div className='home__area__content'>
             <h1>学習中のコンテンツ</h1>
             <div className='home__area__content__btn'>
-              <div className='home__area__content__btn-design btn-active'>
-                <Link to='/'>デザイン案件獲得コンサル</Link>
-              </div>
-              <div className='home__area__content__btn-graduated btn-inactive'>
-                <Link to='/'>卒業コンテンツ</Link>
-              </div>
+              <button className={`home__area__content__btn-design ${activeButton === 'design' ? 'btn-active' : 'btn-inactive'}`} onClick={() => handleButtonClick('design')}>
+                <div>
+                  デザイン案件獲得コンサル
+                </div>
+              </button>
+              <button className={`home__area__content__btn-graduated ${activeButton === 'graduated' ? 'btn-active' : 'btn-inactive'}`} onClick={() => handleButtonClick('graduated')}>
+                <div>
+                  卒業コンテンツ
+                </div>
+              </button>
             </div>
-            <div className='home__area__content__progress'>
-              <div className='home__area__content__progress__detail'>
-                {latestItem && <p>{latestItem.data().title}</p>}
-                {latestItem && <p>{latestItem.data().text}</p>}
+            {
+              activeButton === 'design' &&(
+              <div className='home__area__content__progress'>
+                <div className='home__area__content__progress__detail'>
+                  {latestItem && <p>{latestItem.data().title}</p>}
+                  {latestItem && <p>{latestItem.data().text}</p>}
+                </div>
+                <div className='home__area__content__progress__link'>
+                  {latestItem && (<Link to={`/design/${latestItem.id}`}>続きから学習する</Link>)}
+                </div>
               </div>
-              <div className='home__area__content__progress__link'>
-                {latestItem && (<Link to={`/design/${latestItem.id}`}>続きから学習する</Link>)}
+              )
+            }
+            {
+              activeButton === 'graduated' && (
+              <div className='home__area__content__progress'>
+                <div className='home__area__content__progress__detail'>
+                  {latestItem && <p>{latestItem.data().title}</p>}
+                  {latestItem && <p>{latestItem.data().text}</p>}
+                </div>
+                <div className='home__area__content__progress__link'>
+                  {latestItem && (<Link to={`/design/${latestItem.id}`}>続きから学習</Link>)}
+                </div>
               </div>
-            </div>
+              )
+            }
           </div>
           <div className='home__area__course'>
             <h1>コース一覧</h1>
