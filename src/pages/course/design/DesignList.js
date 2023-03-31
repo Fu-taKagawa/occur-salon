@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
+import firebase from "../../../config/firebase";
 import Header from "../../../component/header/header";
 import Footer from "../../../component/footer/footer";
 import { Link } from "react-router-dom";
@@ -28,27 +29,27 @@ const DesignList =()=>{
                 <div className="list__area">
                     <div className="list__area__content">
                         <h1>事前準備編</h1>
-                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='prepare1'/>
-                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='prepare2'/>
-                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='prepare3'/>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' designId='prepare1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' designId='prepare2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' designId='prepare3'/>
                     </div>
                     <div className="list__area__content">
                         <h1>HTML編</h1>
-                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='sechtml1'/>
-                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='sechtml2'/>
-                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='sechtml3'/>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' designId='sechtml1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' designId='sechtml2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' designId='sechtml3'/>
                     </div>
                     <div className="list__area__content">
                         <h1>CSS編</h1>
-                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='seccss1'/>
-                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='seccss2'/>
-                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='seccss3'/>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' designId='seccss1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' designId='seccss2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' designId='seccss3'/>
                     </div>
                     <div className="list__area__content">
                         <h1>請求書編</h1>
-                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' itemId='invoice1'/>
-                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' itemId='invoice2'/>
-                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' itemId='invoice3'/>
+                        <DesignContent title='1.本講座を進めていくにあたってのガイダンス (15:08)' designId='invoice1'/>
+                        <DesignContent title='2.本講座を進めていくにあたってのガイダンス (15:08)' designId='invoice2'/>
+                        <DesignContent title='3.本講座を進めていくにあたってのガイダンス (15:08)' designId='invoice3'/>
                     </div>
                 </div>
             </section>

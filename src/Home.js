@@ -8,21 +8,21 @@ import course_design from './img/course-design.png'
 
 function Home() {
   const user = firebase.auth().currentUser;
-  const [latestItem, setLatestItem] = useState(null);
+  const [latestDesign, setLatestDesign] = useState(null);
   const [activeButton, setActiveButton] = useState('design');
   const handleButtonClick = (button) => {
     setActiveButton(button);
     console.log(button)
   };
   useEffect(()=>{
-    firebase.firestore().collection(`userAuth/${user.uid}/items`)
+    firebase.firestore().collection(`userAuth/${user.uid}/design`)
     .orderBy("timestamp", "desc") // timestampフィールドを降順でソートする
     .limit(1) // 最新の1つだけを取得する
     .get()
     .then((querySnapshot) => {
       if (!querySnapshot.empty) {
-        const latestItem = querySnapshot.docs[0];
-        setLatestItem(latestItem);
+        const latestDesign = querySnapshot.docs[0];
+        setLatestDesign(latestDesign);
       } else {
         console.log("No items found.");
       }
@@ -54,24 +54,11 @@ function Home() {
               activeButton === 'design' &&(
               <div className='home__area__content__progress'>
                 <div className='home__area__content__progress__detail'>
-                  {latestItem && <p>{latestItem.data().title}</p>}
-                  {latestItem && <p>{latestItem.data().text}</p>}
+                  {latestDesign && <p>{latestDesign.data().title}</p>}
+                  {latestDesign && <p>{latestDesign.data().text}</p>}
                 </div>
                 <div className='home__area__content__progress__link'>
-                  {latestItem && (<Link to={`/design/${latestItem.id}`}>続きから学習する</Link>)}
-                </div>
-              </div>
-              )
-            }
-            {
-              activeButton === 'graduated' && (
-              <div className='home__area__content__progress'>
-                <div className='home__area__content__progress__detail'>
-                  {latestItem && <p>{latestItem.data().title}</p>}
-                  {latestItem && <p>{latestItem.data().text}</p>}
-                </div>
-                <div className='home__area__content__progress__link'>
-                  {latestItem && (<Link to={`/design/${latestItem.id}`}>続きから学習</Link>)}
+                  {latestDesign && (<Link to={`/design/${latestDesign.id}`}>続きから学習する</Link>)}
                 </div>
               </div>
               )

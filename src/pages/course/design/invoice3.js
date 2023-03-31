@@ -6,8 +6,8 @@ import DesignNavi from '../../../component/navigation/DesignNavi';
 
 const DesignInvoice3 = () =>{
     const user = firebase.auth().currentUser;
-    const itemId = 'invoice3';
-    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
+    const designId = 'invoice3';
+    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/design`).doc(designId);
     useEffect(() => {
         function OnLoad(){
             const navi__designPre1 = document.querySelector('.navi__design-invoice3');

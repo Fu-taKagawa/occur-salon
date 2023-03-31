@@ -4,11 +4,11 @@ import firebase from "../../config/firebase";
 
 const DesignListBtn = (props) =>{
     const [isItemViewed, setIsItemViewed] = useState(false);
-    const itemId = props.itemId;
+    const designId = props.designId;
     useEffect(() => {
         const user = firebase.auth().currentUser;
-        if (user && itemId) {
-            const itemRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
+        if (user && designId) {
+            const itemRef = firebase.firestore().collection(`userAuth/${user.uid}/design`).doc(designId);
             itemRef.get().then((doc) => {
             if (doc.exists) {
                 setIsItemViewed(doc.data().viewed);
@@ -16,10 +16,10 @@ const DesignListBtn = (props) =>{
             }
             });
         }
-    }, [itemId]);
-    const handleView = (itemId) => {
+    }, [designId]);
+    const handleView = (designId) => {
         const user = firebase.auth().currentUser;
-        const itemRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
+        const itemRef = firebase.firestore().collection(`userAuth/${user.uid}/design`).doc(designId);
         itemRef.update({ viewed: true })
             .then(() => {
                 setIsItemViewed(true);
@@ -30,7 +30,7 @@ const DesignListBtn = (props) =>{
     };
     return(
         <>
-            {isItemViewed ? (<Link to={`/design/${itemId}`} className='bg__black'>復習する</Link>):(<Link to={`/design/${itemId}`} onClick={() => handleView(itemId)}>受講する</Link>)}
+            {isItemViewed ? (<Link to={`/design/${designId}`} className='bg__black'>復習する</Link>):(<Link to={`/design/${designId}`} onClick={() => handleView(designId)}>受講する</Link>)}
         </>
     )
 }

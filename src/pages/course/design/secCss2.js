@@ -6,8 +6,8 @@ import DesignNavi from '../../../component/navigation/DesignNavi';
 
 const DesignCss2 = () =>{
     const user = firebase.auth().currentUser;
-    const itemId = 'seccss2';
-    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
+    const designId = 'seccss2';
+    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/design`).doc(designId);
     useEffect(() => {
         function OnLoad(){
             const navi__designPre1 = document.querySelector('.navi__design-css2');

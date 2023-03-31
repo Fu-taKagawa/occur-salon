@@ -5,8 +5,8 @@ import DesignListBtn from "../btn/DesignListBtn";
 const DesignContent = (props) =>{
     const user = firebase.auth().currentUser;
     const title = props.title;
-    const itemId = props.itemId;
-    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
+    const designId = props.designId;
+    const docRef = firebase.firestore().collection(`userAuth/${user.uid}/design`).doc(designId);
     useEffect(()=>{
         docRef.get().then((doc) => {
             if (doc.exists) {
@@ -23,7 +23,7 @@ const DesignContent = (props) =>{
                     <p>{title}</p>
                 </div>
                 <div className='list__area__content__item__link'>
-                    <DesignListBtn itemId={itemId}/>
+                    <DesignListBtn designId={designId}/>
                 </div>
             </div>
         </>

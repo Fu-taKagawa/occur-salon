@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const DesignNavi=()=>{
     const [isItemViewed, setIsItemViewed] = useState(false);
-    const handleView = (itemId='') => {
+    const handleView = (designId='') => {
         const user = firebase.auth().currentUser;
-        const itemRef = firebase.firestore().collection(`userAuth/${user.uid}/items`).doc(itemId);
+        const itemRef = firebase.firestore().collection(`userAuth/${user.uid}/design`).doc(designId);
         itemRef.update({ viewed: true })
             .then(() => {
                 setIsItemViewed(true);
